@@ -3,6 +3,7 @@ package su22b1.sof3021.beans;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotBlank;
+import org.springframework.stereotype.Component;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,6 +14,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Component
 public class User {
 	@NotBlank
 	private String hoTen;
@@ -21,6 +23,7 @@ public class User {
 	private String diaChi;
 	
 	@NotNull
+	// chỉ trong khoảng 0-1
 	private int gioiTinh;
 	
 	@NotBlank
