@@ -60,6 +60,8 @@ public class AccountController {
 		@RequestParam(name="page", defaultValue="0") int page,
 		@RequestParam(name="size", defaultValue="10") int size
 	) {
+		Account a = this.accountRepo.findByUsername("TienNH24");
+		System.out.println(a.getEmail());
 		Pageable pageable = PageRequest.of(page, size);
 		Page<Account> p = this.accountRepo.findAll(pageable);
 		model.addAttribute("data", p);
