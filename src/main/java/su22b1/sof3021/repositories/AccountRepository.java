@@ -16,5 +16,5 @@ public interface AccountRepository
 	// public Account findByUsername(@Param("username") String username);
 	
 	// C3: DSL
-	public Account findByUsernameEqual(String username);
+	public Account findByUsernameEquals(String username);
 }

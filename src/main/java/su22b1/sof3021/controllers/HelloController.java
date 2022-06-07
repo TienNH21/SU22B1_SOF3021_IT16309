@@ -37,6 +37,7 @@ public class HelloController {
 			defaultValue="IT16309"
 		) Optional<String> name
 	) {
+		System.out.println("HelloController@hello");
 		String hoTen = (name.isPresent() == false ||
 			name.get().length() == 0) ? "IT16309" :
 			name.get();
